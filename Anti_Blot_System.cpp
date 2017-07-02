@@ -75,6 +75,7 @@ int main() {
 	for (int j = 0; j < cases; j++) {
 		cout << tab[j] << endl;
 	}
+	delete(tab);
 
 	//getchar();
 	// your code goes here
