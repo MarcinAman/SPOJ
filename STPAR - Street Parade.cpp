@@ -8,20 +8,17 @@
 using namespace std;
 
 bool check_if_possible(stack<int>& stack_in, int n){
-	if(n==1 or n==2 or n==3){
+	if(n==1 or n==2 or n==3){ //it is always possible ;)
 		return true;
-	}
+	} 
 	stack<int>stack_out;
-	stack<int>output;
 	int current =1;
 	while(!stack_in.empty()&&current!=n+1){
 		if(stack_in.top()==current){
 			current++;
-			output.push(stack_in.top());
 			stack_in.pop();
 		}
 		else if(!stack_out.empty()&& stack_out.top()==current){
-			output.push(stack_out.top());
 			stack_out.pop();
 			current++;
 		}
